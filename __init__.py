@@ -40,3 +40,7 @@ def prime_factors(n):
             l.append((i, c))
 
     return l
+
+
+def are_twin_primes(s, t):
+    return is_prime(s) and is_prime(t) and abs(s - t) == 2
