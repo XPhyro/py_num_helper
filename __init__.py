@@ -19,6 +19,9 @@ def is_prime(n):
 
 
 def prime_factors(n):
+    if n < 2:
+        return []
+
     c = 0
     while not n % 2:
         n /= 2
@@ -44,3 +47,20 @@ def prime_factors(n):
 
 def are_twin_primes(s, t):
     return is_prime(s) and is_prime(t) and abs(s - t) == 2
+
+
+def digit_counts(n):
+    n = int(n)
+    if n < 1:
+        n = -n
+
+    s = str(n)
+    l = {}
+
+    for i in range(0, 10):
+        l[str(i)] = 0
+
+    for i in s:
+        l[i] += 1
+
+    return l
