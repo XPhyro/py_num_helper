@@ -46,7 +46,7 @@ def prime_factors(n):
 
 
 def are_twin_primes(s, t):
-    return is_prime(s) and is_prime(t) and abs(s - t) == 2
+    return abs(s - t) == 2 and is_prime(s) and is_prime(t)
 
 
 def digit_counts(n):
